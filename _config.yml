@@ -12,7 +12,7 @@ lang: en
 timezone: America/Chicago
 
 # jekyll-seo-tag settings â€º https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-# â†“ --------------------------
+# â†? --------------------------
 
 title: The Reserv # the main title
 
@@ -35,7 +35,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Kai NeSmith
-  email: nesmithkai@gmail.com # change to your email address
+  email: kai@resistiv.xyz # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/resistivkai # change to your twitter homepage
@@ -46,7 +46,7 @@ social:
 
 google_site_verification: # fill in to your verification string
 
-# â†‘ --------------------------
+# â†? --------------------------
 # The end of `jekyll-seo-tag` settings
 
 google_analytics:
