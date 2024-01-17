@@ -12,7 +12,7 @@ lang: en
 timezone: America/Chicago
 
 # jekyll-seo-tag settings â€º https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-# â†? --------------------------
+# â†“ --------------------------
 
 title: The Reserv # the main title
 
@@ -46,7 +46,7 @@ social:
 
 google_site_verification: # fill in to your verification string
 
-# â†? --------------------------
+# â†‘ --------------------------
 # The end of `jekyll-seo-tag` settings
 
 google_analytics:
