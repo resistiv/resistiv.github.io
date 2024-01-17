@@ -6,7 +6,7 @@ order: 4
 
 Hiya, I'm Kai!
 
-I'm currently a junior Computer Science student studying at the University of Alabama. I enjoy working with the C family of languages, with C# being my favorite. When I'm not working on uni assignments, I'm practicing reverse engineering by working on old video games (particularly PS1 games). I also enjoy documenting the proprietary file formats that said old games use and writing tools for the particularly interesting ones.
+I'm a Computer Science student studying at the University of Alabama, working towards my bachelor's and master's degrees concurrently. I enjoy working with the C family of languages, with C# being my favorite. When I'm not working on uni assignments, I'm practicing reverse engineering by working on old video games (particularly PS1 games). I also enjoy documenting the proprietary file formats that said old games use and writing tools for the particularly interesting ones.
 
 Aside from software development, I am a casual voice actor, [photographer](https://www.instagram.com/resistivkai/), [coin collector](https://en.numista.com/echanges/profil.php?id=295539), [preservationist](https://archive.org/details/@resistiv), genealogist, and so much more (can you tell I get hooked on things easily?). The overarching theme encompassing a lot of my interests is a desire to capture & document things that are obscure, forgotten, or otherwise lost.
 
