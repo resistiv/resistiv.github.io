@@ -13,3 +13,5 @@ Aside from software development, I am a casual voice actor, [photographer](https
 If you ever need anything, don't be afraid to reach out, I promise I don't bite! You can most quickly reach me over on Twitter or via email and I'll try my best to get back to you as soon as possible.
 
 My favicon was created by [@kingjaspy](https://twitter.com/kingjaspy) and my icon was created by [@pillowdinos](https://twitter.com/pillowdinos), both over on Twitter!
+
+\- Kai :)
