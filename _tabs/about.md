@@ -14,6 +14,8 @@ You can find me elsewhere online at the links at the bottom of the sidebar. If y
 
 If you ever need anything, don't be afraid to reach out, I promise I don't bite! You can most quickly reach me over on Twitter or via email and I'll try my best to get back to you as soon as possible.
 
+If you enjoy what I make and would like to support me, you can drop me a donation over on [my Ko-fi](https://ko-fi.com/resistiv)! 
+
 My favicon was created by [@kingjaspy](https://twitter.com/kingjaspy) and my icon was created by [@pillowdinos](https://twitter.com/pillowdinos), both over on Twitter!
 
 \- Kai :)
