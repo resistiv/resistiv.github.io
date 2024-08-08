@@ -65,7 +65,7 @@ jobs:
         uses: cicirello/generate-sitemap@v1.10.1
         with:
           base-url-path: https://resistiv.xyz/
-          exclude-paths: vcf
+          exclude-paths: https://resistiv.xyz/vcf/
 
   deploy:
     environment:
