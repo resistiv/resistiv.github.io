@@ -61,10 +61,11 @@ jobs:
         with:
           path: "_site${{ steps.pages.outputs.base_path }}"
           
-      - name: generate-sitemap
+      - name: Generate sitemap
         uses: cicirello/generate-sitemap@v1.10.1
         with:
           base-url-path: https://resistiv.xyz/
+          exclude-paths: vcf
 
   deploy:
     environment:
