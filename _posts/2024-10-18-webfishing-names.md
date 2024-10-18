@@ -1,7 +1,7 @@
 ---
 title: WEBFISHING Steam Name BBCode Injection
 author: kai
-date: 2024-10-18 00:00:00 -0600
+date: 2024-10-18 15:33:56 -0500
 # last_modified_date: 
 categories: [Exploits, PC]
 tags: [exploits, pc, injection]
