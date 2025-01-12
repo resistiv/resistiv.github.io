@@ -1,0 +1,4 @@
+baseURL = 'https://resistiv.xyz/'
+languageCode = 'en-us'
+title = 'The Reserv'
+theme = 'hugo-reserv'
