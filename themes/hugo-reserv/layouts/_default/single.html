@@ -1,5 +1,8 @@
 {{ define "main" }}
 <h2>{{ .Title }}</h2>
-<p>{{ .PublishDate }}</p>
+<p>Posted <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" }}">{{ .PublishDate.Format "January 2, 2006" }}</time></p>
+{{ if .Params.Tags }}
+  Tags: {{ partial "tags.html" . -}}
+{{ end }}
 <div>{{ .Content }}</div>
 {{ end }}
