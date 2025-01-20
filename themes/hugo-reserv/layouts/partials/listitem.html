@@ -5,8 +5,8 @@
         </a>
     </h3>
     <p>
-        {{ if .PublishDate }}
-        <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" }}">{{ .PublishDate.Format "January 2, 2006" }}</time>
+        {{ if .Date }}
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
         {{ end }}
         {{ if .Params.Tags }}
         | Tags: {{ partial "tags.html" . -}}

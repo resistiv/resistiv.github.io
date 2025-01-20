@@ -2,3 +2,10 @@ baseURL = 'https://resistiv.xyz/'
 languageCode = 'en-us'
 title = 'The Reserv'
 theme = 'hugo-reserv'
+
+enableRobotsTXT = true
+
+[params]
+  [params.author]
+    email = 'kai@resistiv.xyz'
+    name = 'Kai NeSmith'
