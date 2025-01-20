@@ -2,7 +2,7 @@
 date = '2024-01-17T00:49:30-0600'
 draft = true
 title = "Fatal Frame's IMG_HD.BIN and IMG_BD.BIN"
-tags = ["File Formats", "PS2"]
+tags = ["fileformats", "ps2"]
 summary = "Taking a closer look into Fatal Frame's storage format and finding file names where they don't exist. "
 +++
 

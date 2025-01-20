@@ -2,7 +2,7 @@
 date = '2024-02-25T23:36:39-0600'
 draft = true
 title = "TheyerGFX's Custom File Formats"
-tags = ["File Formats", "PS1"]
+tags = ["fileformats", "ps1"]
 summary = "Exploring custom file formats from a little-known Australian PlayStation developer's watersports games."
 +++
 
