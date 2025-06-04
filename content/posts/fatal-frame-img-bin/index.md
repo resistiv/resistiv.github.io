@@ -1,14 +1,26 @@
-+++
-date = '2024-01-17T00:49:30-0600'
-draft = true
-title = "Fatal Frame's IMG_HD.BIN and IMG_BD.BIN"
-tags = ["fileformats", "ps2"]
-summary = "Taking a closer look into Fatal Frame's storage format and finding file names where they don't exist. "
-+++
+---
+title: Fatal Frame's IMG_HD.BIN and IMG_BD.BIN
+author: Kai NeSmith
+date: 2024-01-17 00:49:30 -0600
+tags: [file formats, ps2]
+---
+
+{{< figure
+  src="gamess1.png"
+  width="65%"
+  caption="A screenshot from Fatal Frame, where the player-controlled character, Miku, is facing the camera from the other side of a dark hallway."
+>}}
+
+## Introduction
 
 Back in early 2020, just as the COVID-19 pandemic was taking its hold on the world, I picked up a copy of _Fatal Frame_ for the PlayStation 2. As I do with nearly every new game I get, I played through it for a while (even streaming it in this case) and eventually got curious as to how its assets are stored. In fact, I even made a Twitter thread (albeit chaotic and unprofessional) diving into my method for deciphering the format[^1]; this post should serve as a much better description of the process of reversing the format.
 
-![A screenshot from Fatal Frame, where the player is damaging a spirit through use of the Camera Obscura.](gamess2.png){: w="400" .left}
+{{< figure
+  src="gamess2.png"
+  width="65%"
+  caption="A screenshot from Fatal Frame, where the player is damaging a spirit through use of the Camera Obscura."
+  loading="lazy"
+>}}
 
 _Fatal Frame_ is a survival-horror game for the PlayStation 2, originally released in Japan in 2001 as _零～ｚｅｒｏ～_ and later released in North America and Europe as _Fatal Frame_ and _Project Zero_, respectively.
 
@@ -48,8 +60,12 @@ While the basic format is perfectly functional when it comes to use by the game 
 
 The format does not support names, but lucky for us, there is a large amount of debug information and are many symbols left within the game's executable. The name of the executable varies by region, but will generally take the form ``SXXX_NNN.NN`` where ``X`` is an alphabetic character and ``N`` is a numeric digit. First noted by user mariokart64n in a XeNTaX (R.I.P.) thread[^2], all of the file names (or some sort of naming) exist within the executable, presumably as debug symbols for each entry of an enum type named ``CD_FILE_DAT``.
 
-![The first occurrence of "CD_FILE_DAT" within a North American Fatal Frame executable, followed by the file name list.](cdfiledat.png)
-_The first occurrence of "CD\_FILE\_DAT" within the North American Fatal Frame executable, SLUS_203.88, followed by the full file name list._
+{{< figure
+  src="cdfiledat.png"
+  width="90%"
+  caption="The first occurrence of \"CD_FILE_DAT\" within a North American Fatal Frame executable, followed by the file name list."
+  loading="lazy"
+>}}
 
 So, the complete list of file names can be found by finding the first occurrence of the string ``CD_FILE_DAT`` within the game's executable (other occurrences exist later in the executable, but they are followed by a truncated file name list). The enum name will be something like ``CD_FILE_DAT:T<some number>=e``, followed by a list of comma-separated (``,``) file names with the format ``<file name>:<file index>``. The list is terminated by a semicolon (``;``).  Additionally, it seems that the list is broken into separate strings with a backslash (``\``) and null byte once it reaches a certain length. Importantly, none of the file names have proper extensions; they are all alphanumeric with underscores and no periods; this can be resolved by replacing the last underscore of each file name with a period, which seems to yield accurate results.
 
@@ -59,7 +75,12 @@ Once you've read and parsed the executable, there should be an equal amount of e
 
 Interestingly, mariokart64n also makes mention of a directory system that is "indexed a bit different", but I couldn't find anything aside from the file names. It's entirely possible that the string before the first underscore in a file name denotes a file's parent directory, as there are lots of files with repeated prefixes. However, there are also very many cases that would result in single files within single folders, so I'm not 100% certain. In this case, I think the implementation is best left to the individual developer, as there is no true way of deriving this information -- at least that I've seen thus far -- from the given enum names.
 
-![A group of extracted files with a common prefix that might indicate a directory.](groupedfiles.png "A group of extracted files with a common prefix that might indicate a directory.")
+{{< figure
+  src="groupedfiles.png"
+  width="80%"
+  caption="A group of extracted files with a common prefix that might indicate a directory."
+  loading="lazy"
+>}}
 
 ## Conclusion
 

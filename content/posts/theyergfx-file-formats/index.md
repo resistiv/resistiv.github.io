@@ -1,10 +1,16 @@
-+++
-date = '2024-02-25T23:36:39-0600'
-draft = true
-title = "TheyerGFX's Custom File Formats"
-tags = ["fileformats", "ps1"]
-summary = "Exploring custom file formats from a little-known Australian PlayStation developer's watersports games."
-+++
+---
+title: TheyerGFX's Custom File Formats
+author: Kai NeSmith
+date: 2024-02-25 23:36:39 -0600
+tags: [file formats, ps1]
+---
+
+{{< figure
+  src="gamess1.png"
+  width="65%"
+  caption="A screenshot from California Watersports, where the character Chook is building up speed to catch a wave in the surfing free-play mode."
+  loading="lazy"
+>}}
 
 Around February 2020, I stumbled upon the game _California Watersports_ for the PlayStation 1. I don't remember exactly how I found it, but I vividly remember the colorful Comic Sans logo of the developer, [TheyerGFX](https://theyergfx.com/), being the thing that drew my attention and led me to dig into the game.
 
@@ -60,13 +66,21 @@ A MIB file looks like:
 | char[16]     | Colormap file name (null for 16 bpp images).                   |
 | uint8[``n``] | Data of the image, ``n`` being ``width * height * (bpp / 8)``. |
 
-![An example MIB image from California Watersports (DATA/IMAGES/FRONTEND.PAK/beach.mib).](/assets/img/posts/theyergfx/mibexample.png)
-_An example MIB image from California Watersports (DATA/IMAGES/FRONTEND.PAK/beach.mib)._
+{{< figure
+  src="mibexample.png"
+  width="65%"
+  caption="An example MIB image from California Watersports (DATA/IMAGES/FRONTEND.PAK/beach.mib)."
+  loading="lazy"
+>}}
 
 Colormap MIBs are structurally the same as an ordinary MIB, with some specific requirements. Colormaps will always be 16 bpp (and therefore have a null colormap field), have a height of 1 pixel, and have a width representative of the number of colors in the colormap. Each pixel in the parent 8 bpp image of the colormap will be an index to a color in the colormap (zero-indexed).
 
-![An example colormap from California Watersports (DATA/IMAGES/FRONTEND.PAK/jetski.cmb) rendered as a normal image (upscaled 2x).](/assets/img/posts/theyergfx/colormap.png)
-_An example colormap from California Watersports (DATA/IMAGES/FRONTEND.PAK/jetski.cmb) rendered as a normal image (upscaled 2x)._
+{{< figure
+  src="colormap.png"
+  width="100%"
+  caption="An example colormap from California Watersports (DATA/IMAGES/FRONTEND.PAK/jetski.cmb) rendered as a normal image (upscaled 2x)."
+  loading="lazy"
+>}}
 
 ### P1I Format
 
@@ -83,8 +97,12 @@ This format changed the magic ID and extensions of the files; the magic ID becam
 | char[16]     | Colormap file name (null for 16 bpp images).                   |
 | uint8[``n``] | Data of the image, ``n`` being ``width * height * (bpp / 8)``. |
 
-![An example P1I image from California Surfing (DATA/IMAGES/SCREENS/BACK1.P1I).](/assets/img/posts/theyergfx/p1iexample.png)
-_An example P1I image from California Surfing (DATA/IMAGES/SCREENS/BACK1.P1I)._
+{{< figure
+  src="p1iexample.png"
+  width="40%"
+  caption="An example P1I image from California Surfing (DATA/IMAGES/SCREENS/BACK1.P1I)."
+  loading="lazy"
+>}}
 
 ## Model Formats
 

@@ -1,9 +1,0 @@
-{{ $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
-{{ if .Title }}
-<figure>
-  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy" />
-  <figcaption>{{ .Title }}</figcaption>
-</figure>
-{{ else }}
-<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" />
-{{ end }}

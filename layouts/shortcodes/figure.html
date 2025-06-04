@@ -18,12 +18,13 @@
     {{- with .Get "width" }} width="{{ . }}"{{ end -}}
     {{- with .Get "height" }} height="{{ . }}"{{ end -}}
     {{- with .Get "loading" }} loading="{{ . }}"{{ end -}}
+    style="display:block;margin-left:auto;margin-right:auto"
   ><!-- Closing img tag -->
   {{- if .Get "link" }}</a>{{ end -}}
   {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
     <figcaption>
       {{ with (.Get "title") -}}
-        <p>{{ . }}</p>
+        <h4>{{ . }}</h4>
       {{- end -}}
       {{- if or (.Get "caption") (.Get "attr") -}}<p>
         {{- .Get "caption" | markdownify -}}
