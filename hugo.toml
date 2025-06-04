@@ -1,7 +1,7 @@
 # Basic configuration
 baseURL = "https://resistiv.xyz"
 theme = "hugo-bearcub"
-copyright = "Kai NeSmith (C BY-SA 4.0)"
+copyright = "Kai NeSmith (CC BY-SA 4.0)"
 defaultContentLanguage = "en"
 
 # Generate a nice robots.txt for SEO
